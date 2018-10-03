@@ -1,0 +1,23 @@
+package com.scoe.java.ScoeHibernateFirst;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class FirstLevelTest {
+	public static void main(String[] args) {
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session se = sf.openSession();
+		Transaction tr = se.beginTransaction();
+		Student s1 = (Student) se.get(Student.class, 1);
+		Student s2 = (Student) se.get(Student.class, 1);
+
+		se.flush();
+		tr.commit();
+		se.close();
+
+	}
+
+}
