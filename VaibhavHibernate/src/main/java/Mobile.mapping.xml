@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.scp.java.VaibhavHibernate.Mobile" table = "prod_info">
+     
+      <id name = "mobId" type = "int" column = "ID"></id>
+      
+      <property name = "mobName" column = "Name" type = "string"/>
+      <property name = "mobPrise" column = "Price" type = "int"/>
+      
+      
+   </class>
+</hibernate-mapping>
